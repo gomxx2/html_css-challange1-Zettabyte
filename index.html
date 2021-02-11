@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1> Flexbox</h1>
+    <div class="flex-container">
+        <div class="flexbox1 card">
+            <img src="img/1.jpg" alt="view1">
+            <div class="title">
+                <h3>Top Winter Locations</h3>
+                <p>More than 200 location</p>
+            </div>
+            <div class="short_information">
+                <p>Cards provide context an an entry to more rebust information and view.</p>
+            </div>
+            <div class="tools">
+                <div id="item1">
+                    <button>SHARE</button>
+                    <button  class="trigger">EXPLORE</button>
+                </div>
+                <i id="item2" class='fas fa-angle-down'></i>
+            </div>
+        </div>
+        <div class="flexbox2 card">
+            <img src="img/2.jpg" alt="view2">
+            <div class="title">
+                <h3>Top Winter Locations</h3>
+                <p>More than 200 location</p>
+            </div>
+            <div class="short_information">
+                <p>Cards provide context an an entry to more rebust information and view.</p>
+            </div>
+            <div class="tools">
+                <div id="item1">
+                    <button>SHARE</button>
+                    <button class="second-trigger">EXPLORE</button>
+                </div>
+                <i id="item2" class='fas fa-angle-down'></i>
+            </div>
+        </div>
+        <div class="flaxbox3 card">
+            <div id="user">
+                <table>
+                    <tr>
+                        <th><i class='fas fa-user-alt'></i></th>
+                        <th>
+                            <div class="name-time">
+                                <h4>Gomgom</h4>
+                                <p>1 hour, ago</p>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <img src="img/3.jpg" alt="view3">
+            <div class="title">
+                <h3>Top Winter Locations</h3>
+                <p>More than 200 location</p>
+            </div>
+            <div class="short_information">
+                <p>Cards provide context an an entry to more rebust information and view.</p>
+            </div>
+        </div>
+        <div class="flaxbox4 card">
+            <img src="img/4.jpg" alt="view4">
+            <div class="sosmed">
+                <i class='fas fa-heart'></i>
+                <i class='fas fa-bookmark'></i>
+                <i class="material-icons" style="font-size:15px">location_on</i>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            Bali Ulun Danu Beratan Temple is a temple dedicated to the goddess of the
+                 lake is Ida Batari Dewi Ulun Danu on the edge of a huge crater. <p>h1 The dominant shrines are Meru’s (pagodas) 
+                 dedicated to the lake goddess and the gods of Mount Batur and Mount Gunung Agung, the largest volcano in Bali.</p><p>
+                 The temple was built in the 17th century in worship of the main Hindu trinity, Brahma-Vishnu-Shiva, as well as the
+                  lake goddess, Dewi Danu. The sight and cool atmosphere of the Bali uplands have made the lake and this temple a 
+                  favourite sightseeing and recreational spot as well as a frequently photographed site. <p>Ulun Danu Beratan Temple, 
+                  literally ‘the source temple of Lake Beratan’, is easily the island’s most iconic sanctuary sharing the scenic
+                   qualities with the seaside temples of Uluwatu Temple and Tanah Lot Temple. </p> The smooth reflective surface of 
+                   the lake surrounding most of the temple’s base creates
+                 a unique floating impression, while the mountain range of the Bedugul region encircling <p> the lake provides the temple with a scenic backdrop.</p>
+        </div>
+    </div>
+
+<script>
+      var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".trigger");
+    var triggers = document.querySelector(".second-trigger");
+    var closeButton = document.querySelector(".close-button");
+
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
+    trigger.addEventListener("click", toggleModal);
+    triggers.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
+	
+</script>
+
+</html>
